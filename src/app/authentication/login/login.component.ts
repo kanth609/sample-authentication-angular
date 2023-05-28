@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
-import { UtilityService } from 'src/app/services/utility.service';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-login',
@@ -15,8 +15,11 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   });
 
-  constructor(private route: Router, private utility: UtilityService) {
-    
+  constructor(private route: Router, private utility: HelperService) {
+    this.loginFields.setValue({
+      mail: "mail@mail.com",
+      password: "adsasdasd"
+    })
   }
 
   ngOnInit(){
