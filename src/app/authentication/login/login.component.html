@@ -1,0 +1,11 @@
+<form [formGroup]="loginFields" class="login-form" (ngSubmit)="onSubmitLoginForm()">
+    <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="mail" required>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="'password'" formControlName="password" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Log In</button>
+</form>
