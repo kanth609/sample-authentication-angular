@@ -16,10 +16,7 @@ export class LoginComponent implements OnInit {
   });
 
   constructor(private route: Router, private utility: HelperService) {
-    this.loginFields.setValue({
-      mail: "mail@mail.com",
-      password: "adsasdasd"
-    })
+    
   }
 
   ngOnInit(){
@@ -30,6 +27,8 @@ export class LoginComponent implements OnInit {
     if(this.loginFields.valid){
       this.utility.saveDataInSessionStorage('jwt', this.utility.JWT_TOKEN)
       this.route.navigate(['master/home']);
+    }else {
+      this.utility.showSnackBar("Enter Credentials", "error-snackbar")
     }
   }
 
