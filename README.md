@@ -1,4 +1,7 @@
-# SampleApp
+# Sample Authentication Project
+
+1. This Project will have multiple components as of now i have created mainly user component and it's functionality.
+2. In Future i will be adding more about chart component.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
 
