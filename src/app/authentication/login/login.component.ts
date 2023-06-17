@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   onSubmitLoginForm(){
     if(this.loginFields.valid){
       this.utility.saveDataInSessionStorage('jwt', this.utility.JWT_TOKEN)
-      this.route.navigate(['master']);
+      this.route.navigate(['master/home']);
     }
   }
 

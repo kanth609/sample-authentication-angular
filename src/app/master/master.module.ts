@@ -8,11 +8,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
+import { UsersComponent } from './users/users.component';
+import { ChartsComponent } from './charts/charts.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    UsersComponent,
+    ChartsComponent
   ],
   imports: [
     CommonModule,
